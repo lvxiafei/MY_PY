@@ -9,3 +9,10 @@ def Find(string):
 
 string = 'Google 的网页地址为：https://www.google.com/events/123'
 print(Find(string))
+
+# w2:
+from urllib.parse import *
+
+url = 'https://docs.google.com/spreadsheet/ccc?key=blah-blah-blah-blah#gid=1'
+result = urlparse(url)
+print(result.netloc)
