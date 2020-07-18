@@ -7,7 +7,6 @@ __pycache__/
 *.so
 .idea
 **/.idea/
-**/.DS_Storge
 # Distribution / packaging
 .Python
 build/
