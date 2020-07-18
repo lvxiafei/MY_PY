@@ -24,3 +24,14 @@
 #         line = sys.stdin.readline().strip()
 #         values = list(map(int, line.split()))
 #         print(values)
+
+'''
+input() == sys.stdin.readline().strip()
+
+'''
+# import sys
+# a = sys.stdin.readline().strip()
+# print(a)
+
+b = input()
+print(b)
