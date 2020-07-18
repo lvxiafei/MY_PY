@@ -9,7 +9,13 @@ for i in str:
 print(type(s))
 print(s)
 
-# 列表转字符串
-s1 = ''.join(s)
-print(type(s1))
-print(s1)
+#字符串转列表-一般情况
+str1 = "hi hello world"
+print(str1.split(" "))
+print(list(str1))
+
+
+# # 列表转字符串
+# s1 = ''.join(s)
+# print(type(s1))
+# print(s1)
