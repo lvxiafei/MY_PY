@@ -16,3 +16,6 @@ print(random_int_list(0,100,10))
 # 生成随机数
 ret = random.randint(0, 10)
 print(ret)
+
+ret2 = random.random() # [0,1)范围内的随机浮点数
+print(ret2)
