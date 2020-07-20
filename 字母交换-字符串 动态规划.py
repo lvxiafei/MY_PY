@@ -5,3 +5,23 @@
 输出 2
 '''
 
+s, m = input().split()
+m = int(m)
+s = list(s)
+
+arr = {}
+for i in range(0, len(s)):
+    if s[i] not in arr:
+        arr[s[i]] = []
+    arr[s[i]].append(i)
+
+Max = 0
+for i in arr:
+    if len(arr[i]) > Max:
+        for j in range(Max, len(arr[i])):
+            Sum = 0
+            for k in range(0, j + 1):
+                Sum += abs(arr[i][(j // 2)] - arr[i][k]) - abs((0 + j // 2) - k)
+            if Sum <= m:
+                Max = max(Max, j + 1)
+print(Max)
