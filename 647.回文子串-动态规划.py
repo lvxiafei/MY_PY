@@ -14,7 +14,7 @@ o:6
 
 '''
 
-def countSubstring(s):
+def countSubstrings(s):
     ans = 0
     for i in range(len(s)):
         for j in range(i, len(s)):
@@ -28,4 +28,16 @@ def countSubstring(s):
 
 '''
 
-print(countSubstring("aaa"))
+
+def countSubstrings2(s: str) -> int:
+    dp = [0] * len(s)
+    dp[0] = 1
+    for i in range(1, len(s)):
+        count = 1
+        for j in range(i - 1, -1, -1):
+            if s[j:i + 1] == s[j:i + 1][::-1]:
+                count += 1
+        dp[i] = dp[i - 1] + count
+    return dp[-1]
+
+print(countSubstrings2("aaa"))
