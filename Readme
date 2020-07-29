@@ -6,3 +6,6 @@
 
 仿照： 题目 关键知识点 命名方式 提交到git 本地/远程仓库，输出review
 
+思维顺序：
+    口诀：分贪回递、下动
+    参考  interactive-coding-challenges
