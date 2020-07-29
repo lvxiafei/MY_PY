@@ -35,3 +35,28 @@ if __name__ == "__main__":
 
 
 '''
+
+def factorial3(n):
+    stack = []
+    ret = 1
+    while n > 0:
+        if stack:
+            ret = ret * stack[-1]
+            stack.pop()
+        stack.append(n)
+        n = n - 1
+    return ret
+print(factorial3(3))
+
+# 迭代
+def factorial4(n):
+    result = n;
+    for i in range(1, n):
+        result *= i
+    return result
+
+
+# number = int(input("请输入一个正整数:"))
+number = 4
+result = factorial4(number)
+print("%d 的阶乘是 %d" % (number, result))
