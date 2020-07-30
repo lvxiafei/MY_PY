@@ -10,7 +10,7 @@ input：list
 
 def Bubblle_sort(data):
     for i in range(0, len(data)): # 每次定一位，冒一泡，倒数升序i位最大 泡泡
-        for j in range(0, len(data) - 1 - i):
+        for j in range(0, len(data) - 1 - i): # i只在此出现一次
             if data[j] > data[j + 1]: # swap
                 # tmp = data[j + 1]
                 # data[j + 1] = data[j]
