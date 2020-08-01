@@ -13,7 +13,7 @@ class ListNode:
 '''
 def swapPairs(head):  # 从后向前连
     if head != None and head.next != None:
-        next = head.next # 保存第二个节点，作为交换的第一个节点
+        next = head.next # 定义新节点，保存第二个节点，作为交换的第一个节点
 
         head.next = swapPairs(next.next)  # 指向第三个元素 赋给 head.next
 
