@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
 
 '''
-
+print("模拟递归：")
 def factorial3(n):
     stack = []
     ret = 1
@@ -47,6 +47,21 @@ def factorial3(n):
         n = n - 1
     return ret
 print(factorial3(3))
+print(factorial3(4))
+
+print("模拟递归2：")  # f(n) = f(n-1) * n
+def factorial31(n):
+    stack = [1, 2]
+    i = 3
+    while (n-2):
+        stack.append(stack[-1]*i)
+        n = n - 1
+        i = i + 1
+    return stack
+print(factorial31(3))
+print(factorial31(4))
+print(factorial31(5))
+
 
 # 迭代
 def factorial4(n):
