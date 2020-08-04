@@ -52,26 +52,29 @@ fib(n) = 2 * fib(n-1)
 
 '''
 # 栈实现 模拟递归
+# 栈存储第1到n次的跳法
 print("栈实现普通跳台阶:")
 def fib9(n):
     stack = [1,2]
-    if n  <= 2 : return n
-    temp = n - 2
-    while(temp):
+    if n <= 2: return n
+    # temp = n - 2
+    while(n-2):
         stack.append(stack[-1]+stack[-2])
-        temp -= 1
+        n -= 1
     return stack[-1]
 print(fib9(3))
 
 print("栈实现变态跳台阶:")
 def fib10(n):
     stack = [1,2]
-    if n  <= 2 : return n
+    if n <= 2 : return n
     temp = n - 2
     while(temp):
         stack.append(sum(stack)+1)
         temp -= 1
-    return stack[-1]
+    # return stack[-1]
+    return stack.pop()
 print(fib10(3))
 
 print(fib10(6) == fib7(6))
+
