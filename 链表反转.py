@@ -1,5 +1,3 @@
-
-
 class Node:
     data = 0
     next = None
@@ -48,6 +46,7 @@ def reverse1(head):
     '''
     此处的思维顺序是什么：
         
+        
     '''
     while current is not None:
         pnext = current.next
@@ -81,23 +80,23 @@ def reverse3(current, pre):
 
 if __name__ == '__main__':
     head = build_single_link_list([1, 2, 3, 4, 5])
-    print("原链表", output(head))
+    print("原链表:", output(head))
     head = reverse1(head)
-    print("impl1:", output(head))
+    print("reverse1:", output(head))
     # while head is not None:
     #     print(head.data)
     #     head = head.next
 
-    print("impl2:")
+    print("reverse2:", end=' ')
     head = build_single_link_list([1, 2, 3, 4, 5])
     head = reverse2(head)
     while head is not None:
-        print(head.data, end = ' ')
+        print(head.data, end=' ')
         head = head.next
-    print("\nimpl3:")
+    print("\nreverse3:", end=' ')
     head = build_single_link_list([1, 2, 3, 4, 5])
-    head = reverse3(head,None)
+    head = reverse3(head, None)
     while head is not None:
-        print(head.data, end = ' ')
+        print(head.data, end=' ')
         head = head.next
 
